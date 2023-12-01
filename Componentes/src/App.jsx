@@ -1,6 +1,6 @@
 
 import data from './data/data.js'
-import  Receta  from './components/Receta.jsx'
+import Receta  from './components/Receta.jsx'
 
 function App() {
 
