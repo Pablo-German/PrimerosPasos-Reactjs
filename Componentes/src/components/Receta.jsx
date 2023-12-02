@@ -1,17 +1,14 @@
+import Intrucciones from "./Intrucciones.jsx";
 
-import PropTypes from 'prop-types';
 
-function Receta({ name,pic,  ingredients, steps}) {
+export default function Receta ({name,pic,ingredients,steps})  {
   return (
     <article>
       <h2>{name}</h2>
+      <img src={pic} alt={name} width={200}/>
+      <Intrucciones title ="Intrucciones" steps={steps}></Intrucciones>
+      
     </article>
   );
 }
 
-// Validación de PropTypes para la propiedad 'name'
-Receta.propTypes = {
-  name: PropTypes.string.isRequired,
-};
-
-export default Receta;
