@@ -4,7 +4,6 @@ import Receta  from './components/Receta.jsx'
 
 function App() {
 
-
   return (
     <>
       <header>

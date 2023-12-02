@@ -1,12 +1,16 @@
 
 
-export default function Intrucciones (title, steps ) {
-  return (
-    <div>
+
+function Intrucciones (title, steps) {
+    return ( 
+        <section>
         <h3>{title}</h3>
         {steps.map((x,idx) => (
-            <p key={idx}>{x}</p>
+        <p key={idx}>{x}</p>
+            
         ))}
-    </div>
-  )
+    </section>
+     );
 }
+
+export default Intrucciones;
