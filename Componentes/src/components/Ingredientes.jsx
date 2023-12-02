@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 function Ingredientes({title,ingredients}) {
     
     return ( 
-        <section>
+        <div className='ingredientes'>
         <h2>{title}</h2>
         <ul>
         {ingredients.map((ing,idx)=>(
@@ -11,7 +11,7 @@ function Ingredientes({title,ingredients}) {
         ))}
         </ul>
         
-    </section>
+    </div>
      );
 }
 Ingredientes.propTypes = {
