@@ -1,11 +1,12 @@
-
-function Ingredientes(title,ingre) {
+import PropTypes from 'prop-types';
+// eslint-disable-next-line react/prop-types
+function Ingredientes({title,ingredients}) {
     
     return ( 
         <section>
         <h2>{title}</h2>
         <ul>
-        {ingre.map((ing,idx)=>(
+        {ingredients.map((ing,idx)=>(
             <li key={idx}>{ing.name} - {ing.amount} {ing.measurement}</li>
         ))}
         </ul>
@@ -13,5 +14,15 @@ function Ingredientes(title,ingre) {
     </section>
      );
 }
-
+Ingredientes.propTypes = {
+    title: PropTypes.string.isRequired,
+    ingredients: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        amount: PropTypes.number.isRequired,
+        measurement: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+  };
+  
 export default Ingredientes;

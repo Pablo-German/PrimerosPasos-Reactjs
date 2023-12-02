@@ -5,12 +5,12 @@ import Intrucciones from "./Intrucciones.jsx";
 export default function Receta ({name,pic,ingredients,steps})  {
   return (
     <article>
-      <h2>{name}</h2>
-      <div>
+      <h2 className="Nombre">{name}</h2>
+      <section>
       <img src={pic} alt={name} width={200}/>
-      <Ingredientes title="Ingredientes" ingre={ingredients}></Ingredientes>
+      <Ingredientes title="Ingredientes" ingredients={ingredients}></Ingredientes>
       <Intrucciones title ="Intrucciones" steps={steps}></Intrucciones>
-      </div>
+      </section>
      
       
     </article>
